@@ -6,7 +6,7 @@ import { useLocalStorageState } from "./utils";
 import { SolongAdapter } from "./solong_adapter";
 
 export const WALLET_PROVIDERS = [
-  { name: "sollet.io", url: "https://www.sollet.io" },
+  { name: "Creatify", url: "https://creatifywallet.netlify.app" },
   { name: "solongwallet.com", url: "http://solongwallet.com" },
   { name: "solflare.com", url: "https://solflare.com/access-wallet" },
   { name: "mathwallet.org", url: "https://www.mathwallet.org" },
@@ -18,7 +18,7 @@ export function WalletProvider({ children = null as any }) {
   const { endpoint } = useConnectionConfig();
   const [providerUrl, setProviderUrl] = useLocalStorageState(
     "walletProvider",
-    "https://www.sollet.io"
+    "https://creatifywallet.netlify.app"
   );
   const wallet = useMemo(() => {
     console.log("use new provider:", providerUrl, " endpoint:", endpoint);
